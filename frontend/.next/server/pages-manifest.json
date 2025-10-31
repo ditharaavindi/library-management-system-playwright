@@ -3,10 +3,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/books": "pages/books.js",
-  "/librarian-dashboard": "pages/librarian-dashboard.js",
-  "/add-book": "pages/add-book.js",
-  "/books/[id]": "pages/books/[id].js",
-  "/login": "pages/login.js",
-  "/my-reservations": "pages/my-reservations.js"
+  "/login": "pages/login.js"
 }

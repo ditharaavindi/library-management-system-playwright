@@ -182,6 +182,52 @@ npx playwright test --trace=on
 npx playwright test --project=debug
 ```
 
+#### 🎬 Using Playwright Codegen (Test Generator)
+
+Playwright Codegen automatically generates test code by recording your actions in the browser.
+
+**Important:** Start your application first before running codegen!
+
+```bash
+# Terminal 1: Start the application
+npm run dev
+
+# Terminal 2: Run codegen (in a new terminal)
+npm run test:codegen
+```
+
+**What happens:**
+
+1. Opens browser window at http://localhost:3000
+2. Opens Playwright Inspector showing generated code
+3. Records all your actions (clicks, typing, navigation)
+4. Generates TypeScript test code automatically
+
+**Example workflow:**
+
+1. Codegen opens browser
+2. Perform actions: Login → Browse books → Reserve book
+3. Copy generated code from Playwright Inspector
+4. Save to a test file and refine
+
+**Advanced options:**
+
+```bash
+# Start from specific page
+npx playwright codegen localhost:3000/login
+
+# Use specific browser
+npx playwright codegen localhost:3000 --browser=firefox
+
+# Emulate mobile device
+npx playwright codegen localhost:3000 --device="iPhone 14"
+
+# Save directly to file
+npx playwright codegen localhost:3000 --target typescript -o tests/new-test.spec.ts
+```
+
+**Common error:** If you get `ERR_CONNECTION_REFUSED`, make sure your app is running first with `npm run dev`.
+
 #### Test Reports & Documentation
 
 ```bash

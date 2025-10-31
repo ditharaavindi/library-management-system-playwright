@@ -2088,7 +2088,11 @@
     "location": "AUTO-125"
   },
   {
+<<<<<<< Updated upstream
     "id": "1761915755801",
+=======
+    "id": "1761921998834",
+>>>>>>> Stashed changes
     "title": "Test Book Title",
     "author": "Test Author",
     "year": 2025,
@@ -2103,10 +2107,17 @@
     "available": true,
     "totalCopies": 1,
     "availableCopies": 1,
+<<<<<<< Updated upstream
     "location": "AUTO-801"
   },
   {
     "id": "1761915796923",
+=======
+    "location": "AUTO-834"
+  },
+  {
+    "id": "1761922040921",
+>>>>>>> Stashed changes
     "title": "Test Book Title",
     "author": "Test Author",
     "year": 2025,
@@ -2121,10 +2132,17 @@
     "available": true,
     "totalCopies": 1,
     "availableCopies": 1,
+<<<<<<< Updated upstream
     "location": "AUTO-923"
   },
   {
     "id": "1761915841476",
+=======
+    "location": "AUTO-921"
+  },
+  {
+    "id": "1761922086538",
+>>>>>>> Stashed changes
     "title": "Test Book Title",
     "author": "Test Author",
     "year": 2025,
@@ -2139,6 +2157,10 @@
     "available": true,
     "totalCopies": 1,
     "availableCopies": 1,
+<<<<<<< Updated upstream
     "location": "AUTO-476"
+=======
+    "location": "AUTO-538"
+>>>>>>> Stashed changes
   }
 ]

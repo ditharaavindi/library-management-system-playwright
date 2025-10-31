@@ -23,12 +23,35 @@ This is a full-stack TypeScript application consisting of:
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd library-management-system
+cd library-management-system-playwright
 
-# Install dependencies for both frontend and backend
+# Install all dependencies (root, frontend, and backend)
 npm run setup
 
-# Install Playwright browsers (required for testing)
+# This command will:
+# - Install root dependencies
+# - Install backend dependencies
+# - Install frontend dependencies
+# - Install Playwright browsers for testing
+```
+
+**Alternative: Manual Installation**
+
+```bash
+# Install root dependencies
+npm install
+
+# Install backend dependencies
+cd backend
+npm install
+cd ..
+
+# Install frontend dependencies
+cd frontend
+npm install
+cd ..
+
+# Install Playwright browsers
 npx playwright install
 ```
 
@@ -106,7 +129,7 @@ The system comes with pre-configured users:
 
 ### Playwright E2E Test Suite
 
-The project includes a comprehensive Playwright test suite with **329 tests** across **47 test cases** covering all application functionality.
+The project includes a comprehensive Playwright test suite with **47 test cases** covering all application functionality across multiple test files.
 
 #### Quick Start Testing
 
@@ -175,20 +198,26 @@ npx playwright test --reporter=json --output-file=results.json
 ### Individual Test File Execution
 
 ```bash
-# Basic functionality tests (login, navigation, startup)
-npx playwright test tests/basic-functionality.spec.ts
+# Access control tests (10 tests)
+npx playwright test tests/access-control.spec.ts
 
-# Book management and search tests
-npx playwright test tests/book-management.spec.ts
+# Book management tests (6 tests)
+npx playwright test tests/books.spec.ts
 
-# Reservation system tests
-npx playwright test tests/reservation-system.spec.ts
+# Dashboard tests (7 tests)
+npx playwright test tests/dashboard.spec.ts
 
-# Session management and network tests
-npx playwright test tests/session-network.spec.ts
+# Homepage tests (6 tests)
+npx playwright test tests/homepage.spec.ts
 
-# Visual and cross-browser tests
-npx playwright test tests/visual-cross-browser.spec.ts
+# Login tests (6 tests)
+npx playwright test tests/login.spec.ts
+
+# Navigation tests (7 tests)
+npx playwright test tests/navigation.spec.ts
+
+# Reservation system tests (6 tests)
+npx playwright test tests/reservations.spec.ts
 ```
 
 ### Run Tests by Category
@@ -233,166 +262,220 @@ npx playwright test --headed=false
 
 ### Test Files & Categories
 
-1. **basic-functionality.spec.ts** - Application startup, authentication, and navigation
-2. **book-management.spec.ts** - Book search, filtering, and admin management features
-3. **reservation-system.spec.ts** - Book reservations and librarian approval workflow
-4. **session-network.spec.ts** - User session management and network handling
-5. **visual-cross-browser.spec.ts** - Visual testing, cross-browser compatibility, and mobile support
+The project includes **8 test files** with **47 comprehensive test cases**:
 
-### Comprehensive Test Case Mapping
+1. **access-control.spec.ts** (10 tests) - Role-based access control and route protection
+2. **books.spec.ts** (6 tests) - Book browsing, searching, and management
+3. **dashboard.spec.ts** (7 tests) - Librarian dashboard functionality and statistics
+4. **homepage.spec.ts** (6 tests) - Homepage routing and authentication redirects
+5. **login.spec.ts** (6 tests) - User authentication and login flows
+6. **navigation.spec.ts** (7 tests) - Navigation links and responsive behavior
+7. **reservations.spec.ts** (6 tests) - Book reservation system and workflows
+8. **global-setup.ts** - Test environment initialization
 
-#### Application Loading & Startup (Tests 1-5)
+### Test Case Breakdown by Category
 
-| Test # | Description                       | Command                                           |
-| ------ | --------------------------------- | ------------------------------------------------- |
-| 1      | Verify app loads successfully     | `npx playwright test -g "Verify app loads"`       |
-| 2      | Verify auto-redirect to login     | `npx playwright test -g "auto-redirect"`          |
-| 3      | Login with valid user credentials | `npx playwright test -g "valid user credentials"` |
-| 4      | Login with invalid credentials    | `npx playwright test -g "invalid credentials"`    |
-| 5      | Login with admin credentials      | `npx playwright test -g "admin credentials"`      |
+#### 🔒 Access Control Tests (10 tests)
 
-#### Auto-Wait & Network (Tests 6-10, 37-40)
+- Redirect to login when accessing protected routes without authentication
+- Deny access to admin pages for regular users
+- Ensure regular users can only access permitted pages
+- Verify librarian access to dashboard and admin pages
+- Verify admin access to all protected pages
+- Test all protected routes require authentication
+- Enforce role-based access control consistently
+- Maintain access control after page refresh
+- Handle direct URL access attempts properly
+- Test URL manipulation and unauthorized access attempts
 
-- Auto-wait for Login button
-- Wait for network completion
-- Wait for page navigation
-- Auto-wait for book list loading
-- CORS validation
-- Slow network auto-wait handling
-- API mocking and stubbing
+#### 📚 Book Management Tests (6 tests)
 
-#### Book Management (Tests 10-16, 26-27)
+- View all books (verify at least 10 books displayed)
+- Search books by title or author
+- View book details by clicking a book
+- Add new book as admin user
+- Validate required fields on Add Book form
+- Refresh books list functionality
 
-- Book search functionality
-- Add new book (admin only)
-- Form validation and error handling
-- Duplicate book prevention
-- Book details by ID
-- Filter by author and genre
-- Role-based access control
+#### 📊 Dashboard Tests (7 tests)
 
-#### Reservation System (Tests 17-25)
+- Verify dashboard loads for admin users
+- Verify dashboard loads for librarian users
+- Display total reservations count with statistics
+- Display book inventory statistics
+- Navigate to reservation approval section
+- Prevent regular users from accessing dashboard
+- Handle dashboard loading states and errors properly
 
-- Reserve available books
-- Prevent unavailable booking
-- Reservation lifecycle management
-- Librarian approval/rejection workflow
-- Dashboard functionality and pagination
-- Reservation status tracking
+#### 🏠 Homepage Tests (6 tests)
 
-#### Session Management (Tests 30-36)
+- Auto-redirect unauthenticated users to login
+- Redirect authenticated users to appropriate page
+- Redirect admin users to dashboard
+- Show role-appropriate navigation for regular users
+- Navigate between Books and My Reservations pages
+- Display proper loading state during redirects
 
-- User navigation restrictions
-- Admin navigation access
-- My Reservations page access
-- Multi-user session isolation
-- Session persistence and security
+#### 🔑 Login Tests (6 tests)
 
-#### Visual & Cross-Browser Testing (Tests 41-50)
+- Login successfully with valid user credentials
+- Reject invalid credentials with error message
+- Redirect admin to dashboard after login
+- Redirect librarian to dashboard after login
+- Logout successfully and redirect to login
+- Prevent empty form submission with validation
 
-- Screenshot capture and comparison
-- Cross-browser UI consistency
-- Chromium, Firefox, WebKit compatibility
-- iPhone and iPad emulation
-- Responsive design validation
+#### 🧭 Navigation Tests (7 tests)
 
-#### Performance & CI/CD (Tests 51-60)
+- Verify navigation links for regular users
+- Verify navigation links for librarian users
+- Show admin features only for authorized users
+- Show dashboard navigation only for authorized roles
+- Reset session properly on logout
+- Show proper navigation state and current page
+- Handle responsive navigation behavior
 
-- Parallel test execution
-- Automatic retry mechanisms
-- Video recording for debugging
-- Codegen test generation
-- HTML report generation
-- JSON export functionality
-- CI/CD integration with GitHub Actions
+#### 📖 Reservation Tests (6 tests)
+
+- Reserve an available book as user
+- Prevent double-reserving the same book
+- Allow librarian to approve reservations
+- Allow librarian to reject reservations
+- Allow users to view updated reservation status
+- Allow librarian to mark reservations as completed
 
 ### Test Execution Examples
 
-#### Authentication Flow Testing
+#### Run Tests by Category
 
 ```bash
-# Login scenarios (Tests 3-5)
-npx playwright test tests/basic-functionality.spec.ts -g "Authentication"
+# Authentication and login tests
+npx playwright test tests/login.spec.ts
+
+# Access control and security tests
+npx playwright test tests/access-control.spec.ts
+
+# Book management tests
+npx playwright test tests/books.spec.ts
+
+# Reservation workflow tests
+npx playwright test tests/reservations.spec.ts
+
+# Dashboard and admin tests
+npx playwright test tests/dashboard.spec.ts
+
+# Navigation tests
+npx playwright test tests/navigation.spec.ts
+
+# Homepage and routing tests
+npx playwright test tests/homepage.spec.ts
 ```
 
-#### Session Management Testing
+#### Run Tests by Pattern
 
 ```bash
-# Session persistence & security (Tests 33-36)
-npx playwright test tests/session-network.spec.ts -g "Session Management"
-```
+# All login-related tests
+npx playwright test -g "login"
 
-#### Network & API Testing
+# All access control tests
+npx playwright test -g "access|redirect|unauthorized"
 
-```bash
-# API integration tests (Tests 37-40)
-npx playwright test tests/session-network.spec.ts -g "Network and API"
-```
+# All reservation tests
+npx playwright test -g "reservation|reserve|approve|reject"
 
-#### Visual Testing
-
-```bash
-# Screenshot testing
-npx playwright test tests/visual-cross-browser.spec.ts -g "screenshot"
-
-# Cross-browser visual comparison
-npx playwright test tests/visual-cross-browser.spec.ts -g "UI consistency"
+# All admin/librarian features
+npx playwright test -g "admin|librarian|dashboard"
 ```
 
 ## 📁 Project Structure
 
 ```
-library-management-system/
-├── frontend/              # Next.js React application
-│   ├── components/        # Reusable React components
-│   ├── pages/            # Next.js pages and API routes
-│   ├── styles/           # CSS and styling files
-│   ├── utils/            # Utility functions and helpers
-│   └── types.ts          # TypeScript type definitions
-├── backend/              # Express.js API server
-│   └── src/              # Backend source code
-│       ├── routes/       # API route handlers
-│       ├── models/       # Data models and types
-│       ├── middleware/   # Express middleware
-│       └── utils/        # Backend utility functions
-├── tests/                # Playwright E2E tests
-│   ├── basic-functionality.spec.ts
-│   ├── book-management.spec.ts
-│   ├── reservation-system.spec.ts
-│   ├── session-network.spec.ts
-│   └── visual-cross-browser.spec.ts
-├── playwright-report/    # Generated test reports
-├── test-results/         # Test execution artifacts
-├── playwright.config.ts  # Playwright configuration
-└── package.json         # Project dependencies and scripts
+library-management-system-playwright/
+├── frontend/                    # Next.js React application
+│   ├── components/              # Reusable React components
+│   │   ├── BookCard.tsx         # Book display component
+│   │   └── Navigation.tsx       # Navigation menu component
+│   ├── pages/                   # Next.js pages
+│   │   ├── _app.tsx             # App wrapper
+│   │   ├── index.tsx            # Homepage with auth redirect
+│   │   ├── login.tsx            # Login page
+│   │   ├── books.tsx            # Books catalog page
+│   │   ├── add-book.tsx         # Add book page (admin)
+│   │   ├── my-reservations.tsx  # User reservations page
+│   │   ├── librarian-dashboard.tsx  # Dashboard (librarian/admin)
+│   │   └── books/               # Dynamic book routes
+│   │       └── [id].tsx         # Individual book details
+│   ├── styles/                  # CSS styling
+│   │   └── globals.css          # Global styles
+│   ├── utils/                   # Utility functions
+│   │   └── auth.ts              # Authentication helpers
+│   ├── types.ts                 # TypeScript type definitions
+│   ├── package.json             # Frontend dependencies
+│   ├── tsconfig.json            # TypeScript config
+│   ├── next.config.js           # Next.js configuration
+│   └── next-env.d.ts            # Next.js type declarations
+├── backend/                     # Express.js API server
+│   ├── src/                     # Backend source code
+│   │   ├── app.ts               # Express app setup
+│   │   ├── types.ts             # Type definitions
+│   │   ├── routes/              # API route handlers
+│   │   │   ├── auth.ts          # Authentication routes
+│   │   │   ├── books.ts         # Book management routes
+│   │   │   └── reservations.ts # Reservation routes
+│   │   └── data/                # JSON data storage
+│   │       ├── books.json       # Books database
+│   │       └── reservations.json # Reservations database
+│   ├── package.json             # Backend dependencies
+│   └── tsconfig.json            # TypeScript config
+├── tests/                       # Playwright E2E test suite
+│   ├── access-control.spec.ts   # Access control tests (10 tests)
+│   ├── books.spec.ts            # Book management tests (6 tests)
+│   ├── dashboard.spec.ts        # Dashboard tests (7 tests)
+│   ├── homepage.spec.ts         # Homepage tests (6 tests)
+│   ├── login.spec.ts            # Login tests (6 tests)
+│   ├── navigation.spec.ts       # Navigation tests (7 tests)
+│   ├── reservations.spec.ts     # Reservation tests (6 tests)
+│   └── global-setup.ts          # Test environment setup
+├── playwright-report/           # Generated HTML test reports
+│   └── index.html               # Test report viewer
+├── test-results/                # Test execution artifacts
+│   ├── junit.xml                # JUnit format results
+│   └── results.json             # JSON format results
+├── playwright.config.ts         # Playwright configuration
+├── package.json                 # Root project dependencies
+├── start.js                     # Node.js server startup script
+├── start.sh                     # Shell script for startup
+└── README.md                    # Project documentation
 ```
 
-## 🌐 API Endpoints
+## 🌐 API Endpoints Reference
 
-### Authentication
+### Authentication Endpoints
 
-- `POST /api/auth/login` - User login
-- `POST /api/auth/logout` - User logout
-- `GET /api/auth/profile` - Get user profile
+- `POST /api/login` - User authentication and login
 
-### Books
+### Book Management Endpoints
 
-- `GET /api/books` - Get all books
-- `GET /api/books/:id` - Get book by ID
-- `POST /api/books` - Add new book (admin only)
-- `GET /api/books/search?title=` - Search books by title
+- `GET /api/books` - Retrieve all books in the catalog
+- `GET /api/books/:id` - Get detailed information for a specific book
+- `POST /api/books` - Add a new book (admin/librarian only)
+- `POST /api/books/:id/reserve` - Create a reservation for a specific book
 
-### Reservations
+### Reservation Management Endpoints
 
-- `GET /api/reservations` - Get user's reservations
-- `POST /api/reservations` - Create new reservation with time period
-- `GET /api/reservations/all` - Get all reservations (librarian)
-- `PUT /api/reservations/:id` - Update reservation status
-- `DELETE /api/reservations/:id` - Remove reservation when book returned (librarian)
+- `GET /api/reservations` - Get all reservations (librarian/admin)
+- `GET /api/reservations/user/:email` - Get reservations for a specific user
+- `POST /api/reservations` - Create a new book reservation
+- `PUT /api/reservations/:id/approve` - Approve a pending reservation (librarian)
+- `PUT /api/reservations/:id/reject` - Reject a pending reservation (librarian)
+- `PUT /api/reservations/:id/complete` - Mark a reservation as completed (librarian)
+- `PUT /api/reservations/:id/return` - Mark a book as returned (librarian)
+- `DELETE /api/reservations/:id` - Remove a reservation (librarian)
 
-### Health Check
+### System Endpoints
 
-- `GET /health` - Backend health check
+- `GET /health` - Backend health check and status
+- `GET /` - API information and available endpoints list
 
 ## 💡 Development Tips
 
@@ -453,21 +536,112 @@ npx playwright show-report
 
 ## 📋 Test Coverage Summary
 
-✅ **329 Comprehensive Tests** across **47 Test Cases** covering:
+✅ **47 Comprehensive Test Cases** across **8 Test Files** covering:
 
-- ✅ Application Loading & Navigation (5 tests)
-- ✅ Authentication & Authorization (8 tests)
-- ✅ Auto-Wait Mechanisms (6 tests)
-- ✅ Book Management (8 tests)
-- ✅ Reservation System (9 tests)
-- ✅ Session Management (4 tests)
-- ✅ Network & API Integration (4 tests)
-- ✅ Visual & Screenshot Testing (3 tests)
-- ✅ Cross-Browser Compatibility (3 tests)
-- ✅ Mobile & Responsive Design (2 tests)
-- ✅ Performance & Parallel Testing (3 tests)
-- ✅ Debug & Development Tools (5 tests)
-- ✅ CI/CD & Reporting (3 tests)
+- ✅ **Access Control** (10 tests) - Route protection, role-based access, authentication guards
+- ✅ **Book Management** (6 tests) - Browse, search, add books, form validation
+- ✅ **Dashboard** (7 tests) - Admin/librarian dashboard, statistics, loading states
+- ✅ **Homepage** (6 tests) - Authentication redirects, role-based routing
+- ✅ **Login** (6 tests) - Authentication flows, credential validation, logout
+- ✅ **Navigation** (7 tests) - Menu links, responsive design, session management
+- ✅ **Reservations** (6 tests) - Book reservations, approval workflow, status tracking
+- ✅ **Cross-Browser Testing** - Chromium, Firefox, WebKit compatibility
+- ✅ **Mobile Testing** - iPhone 14 emulation for responsive design
+
+## ✨ Project Features
+
+### What's Included
+
+✅ **Complete Full-Stack Application**
+
+- ✅ Next.js frontend with TypeScript
+- ✅ Express.js backend with TypeScript
+- ✅ JSON file-based database (no external DB needed)
+- ✅ User authentication with role-based access control
+- ✅ Responsive design for all devices
+
+✅ **User Roles & Permissions**
+
+- ✅ **Regular Users**: Browse books, search, make reservations, view reservation history
+- ✅ **Librarians**: All user features + approve/reject reservations, mark returns
+- ✅ **Admins**: All features + add new books to the system
+
+✅ **Core Functionality**
+
+- ✅ Book catalog with search and filtering
+- ✅ Book details page with complete information
+- ✅ Reservation system with approval workflow
+- ✅ Reservation period selection (1-30 days)
+- ✅ Librarian dashboard with statistics
+- ✅ User reservation tracking and history
+- ✅ Book availability management
+
+✅ **Testing Infrastructure**
+
+- ✅ 47 comprehensive Playwright E2E tests
+- ✅ Cross-browser testing (Chromium, Firefox, WebKit)
+- ✅ Mobile device testing (iPhone 14)
+- ✅ Automated test reporting (HTML, JUnit, JSON)
+- ✅ CI/CD ready configuration
+- ✅ Test retry mechanisms for reliability
+
+### API Endpoints
+
+The backend provides the following RESTful API endpoints:
+
+#### Authentication
+
+- `POST /api/login` - User authentication
+
+#### Books
+
+- `GET /api/books` - Retrieve all books
+- `GET /api/books/:id` - Get specific book details
+- `POST /api/books` - Add new book (admin/librarian only)
+- `POST /api/books/:id/reserve` - Create reservation for a book
+
+#### Reservations
+
+- `GET /api/reservations` - Get all reservations
+- `GET /api/reservations/user/:email` - Get user's reservations
+- `POST /api/reservations` - Create new reservation
+- `PUT /api/reservations/:id/approve` - Approve pending reservation
+- `PUT /api/reservations/:id/reject` - Reject pending reservation
+- `PUT /api/reservations/:id/complete` - Mark as completed
+- `PUT /api/reservations/:id/return` - Mark book as returned
+- `DELETE /api/reservations/:id` - Remove reservation
+
+#### Health Check
+
+- `GET /health` - Backend health check
+- `GET /` - API information and endpoint list
+
+### Data Storage
+
+The application uses JSON files for data persistence:
+
+- `backend/src/data/books.json` - Book catalog
+- `backend/src/data/reservations.json` - Reservation records
+
+### Browser Compatibility
+
+Tested and working on:
+
+- ✅ Chrome/Chromium (latest)
+- ✅ Firefox (latest)
+- ✅ Safari/WebKit (latest)
+- ✅ Mobile Safari (iOS)
+- ✅ Mobile Chrome (Android)
+
+### Test Projects Configuration
+
+The Playwright configuration includes:
+
+- **chromium** - Desktop Chrome testing
+- **firefox** - Desktop Firefox testing
+- **webkit** - Desktop Safari testing
+- **mobile** - iPhone 14 emulation (selected tests)
+- **debug** - Debug mode with slow motion
 
 ## 📄 License
 

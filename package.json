@@ -1,0 +1,49 @@
+{
+  "name": "library-management-system",
+  "version": "1.0.0",
+  "description": "Full-stack Library Management System with Playwright testing",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node start.js",
+    "dev:shell": "./start.sh",
+    "dev:concurrent": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && PORT=5001 npm run dev",
+    "dev:frontend": "cd frontend && PORT=3000 npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox", 
+    "test:webkit": "npx playwright test --project=webkit",
+    "test:mobile": "npx playwright test --project=mobile",
+    "test:all-browsers": "npx playwright test --project=chromium --project=firefox --project=webkit",
+    "test:codegen": "npx playwright codegen localhost:3000",
+    "test:report": "npx playwright show-report",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "setup": "npm run install:all && npx playwright install",
+    "open": "open http://localhost:3000 || xdg-open http://localhost:3000 || start http://localhost:3000"
+  },
+  "keywords": [
+    "library",
+    "management",
+    "system",
+    "playwright",
+    "testing",
+    "typescript",
+    "nextjs",
+    "express"
+  ],
+  "author": "LMS Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.0.0",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {}
+}

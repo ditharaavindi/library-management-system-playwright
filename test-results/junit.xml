@@ -1,380 +1,380 @@
-<testsuites id="" name="" tests="154" failures="0" skipped="0" errors="0" time="152.25283299999998">
-<testsuite name="access-control.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="chromium" tests="9" failures="0" skipped="0" time="50.196" errors="0">
-<testcase name="Access Control › should redirect to login when accessing /books without authentication" classname="access-control.spec.ts" time="1.758">
+<testsuites id="" name="" tests="154" failures="0" skipped="0" errors="0" time="146.87078">
+<testsuite name="access-control.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="chromium" tests="9" failures="0" skipped="0" time="47.914" errors="0">
+<testcase name="Access Control › should redirect to login when accessing /books without authentication" classname="access-control.spec.ts" time="1.444">
 </testcase>
-<testcase name="Access Control › should deny access to /add-book for regular users" classname="access-control.spec.ts" time="6.426">
+<testcase name="Access Control › should deny access to /add-book for regular users" classname="access-control.spec.ts" time="5.872">
 </testcase>
-<testcase name="Access Control › should ensure regular users only see permitted pages" classname="access-control.spec.ts" time="7.235">
+<testcase name="Access Control › should ensure regular users only see permitted pages" classname="access-control.spec.ts" time="6.742">
 </testcase>
-<testcase name="Access Control › should ensure librarians can access their permitted pages" classname="access-control.spec.ts" time="5.473">
+<testcase name="Access Control › should ensure librarians can access their permitted pages" classname="access-control.spec.ts" time="4.837">
 </testcase>
-<testcase name="Access Control › should ensure admin users can access all permitted pages" classname="access-control.spec.ts" time="3.914">
+<testcase name="Access Control › should ensure admin users can access all permitted pages" classname="access-control.spec.ts" time="3.673">
 </testcase>
-<testcase name="Access Control › should redirect unauthenticated users from all protected routes" classname="access-control.spec.ts" time="3.986">
+<testcase name="Access Control › should redirect unauthenticated users from all protected routes" classname="access-control.spec.ts" time="4.029">
 </testcase>
-<testcase name="Access Control › should enforce role-based access control consistently" classname="access-control.spec.ts" time="6.993">
+<testcase name="Access Control › should enforce role-based access control consistently" classname="access-control.spec.ts" time="7.021">
 </testcase>
-<testcase name="Access Control › should maintain access control after page refresh" classname="access-control.spec.ts" time="4.671">
+<testcase name="Access Control › should maintain access control after page refresh" classname="access-control.spec.ts" time="4.653">
 </testcase>
-<testcase name="Access Control › should handle direct URL access attempts properly" classname="access-control.spec.ts" time="9.74">
-</testcase>
-</testsuite>
-<testsuite name="books.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="chromium" tests="6" failures="0" skipped="0" time="21.617" errors="0">
-<testcase name="Books Management › should view all books and confirm at least 10 appear" classname="books.spec.ts" time="2.453">
-</testcase>
-<testcase name="Books Management › should search by title or author and verify results" classname="books.spec.ts" time="2.413">
-</testcase>
-<testcase name="Books Management › should view book details by clicking a book" classname="books.spec.ts" time="2.419">
-</testcase>
-<testcase name="Books Management › should add new book as admin" classname="books.spec.ts" time="6.917">
-</testcase>
-<testcase name="Books Management › should validate required fields on Add Book form" classname="books.spec.ts" time="4.866">
-</testcase>
-<testcase name="Books Management › should refresh books list when refresh button clicked" classname="books.spec.ts" time="2.549">
+<testcase name="Access Control › should handle direct URL access attempts properly" classname="access-control.spec.ts" time="9.643">
 </testcase>
 </testsuite>
-<testsuite name="dashboard.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="chromium" tests="7" failures="0" skipped="0" time="18.288" errors="0">
-<testcase name="Dashboard › should verify dashboard loads for admin" classname="dashboard.spec.ts" time="2.326">
+<testsuite name="books.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="chromium" tests="6" failures="0" skipped="0" time="21.243" errors="0">
+<testcase name="Books Management › should view all books and confirm at least 10 appear" classname="books.spec.ts" time="2.395">
 </testcase>
-<testcase name="Dashboard › should verify dashboard loads for librarian" classname="dashboard.spec.ts" time="2.3">
+<testcase name="Books Management › should search by title or author and verify results" classname="books.spec.ts" time="2.288">
 </testcase>
-<testcase name="Dashboard › should check total reservations count" classname="dashboard.spec.ts" time="2.26">
+<testcase name="Books Management › should view book details by clicking a book" classname="books.spec.ts" time="2.436">
 </testcase>
-<testcase name="Dashboard › should check book inventory statistics" classname="dashboard.spec.ts" time="2.335">
+<testcase name="Books Management › should add new book as admin" classname="books.spec.ts" time="6.849">
 </testcase>
-<testcase name="Dashboard › should navigate to reservation approval section" classname="dashboard.spec.ts" time="2.322">
+<testcase name="Books Management › should validate required fields on Add Book form" classname="books.spec.ts" time="4.862">
 </testcase>
-<testcase name="Dashboard › should prevent regular users from accessing dashboard" classname="dashboard.spec.ts" time="4.5">
-</testcase>
-<testcase name="Dashboard › should handle dashboard loading states properly" classname="dashboard.spec.ts" time="2.245">
+<testcase name="Books Management › should refresh books list when refresh button clicked" classname="books.spec.ts" time="2.413">
 </testcase>
 </testsuite>
-<testsuite name="homepage.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="chromium" tests="6" failures="0" skipped="0" time="10.872" errors="0">
-<testcase name="Homepage › should auto-redirect to login when not authenticated" classname="homepage.spec.ts" time="0.462">
+<testsuite name="dashboard.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="chromium" tests="7" failures="0" skipped="0" time="18.338" errors="0">
+<testcase name="Dashboard › should verify dashboard loads for admin" classname="dashboard.spec.ts" time="2.325">
 </testcase>
-<testcase name="Homepage › should redirect authenticated user to appropriate page" classname="homepage.spec.ts" time="2.539">
+<testcase name="Dashboard › should verify dashboard loads for librarian" classname="dashboard.spec.ts" time="2.362">
 </testcase>
-<testcase name="Homepage › should redirect authenticated admin to dashboard" classname="homepage.spec.ts" time="2.476">
+<testcase name="Dashboard › should check total reservations count" classname="dashboard.spec.ts" time="2.237">
 </testcase>
-<testcase name="Homepage › should show role-appropriate navigation for regular user" classname="homepage.spec.ts" time="2.266">
+<testcase name="Dashboard › should check book inventory statistics" classname="dashboard.spec.ts" time="2.318">
+</testcase>
+<testcase name="Dashboard › should navigate to reservation approval section" classname="dashboard.spec.ts" time="2.296">
+</testcase>
+<testcase name="Dashboard › should prevent regular users from accessing dashboard" classname="dashboard.spec.ts" time="4.53">
+</testcase>
+<testcase name="Dashboard › should handle dashboard loading states properly" classname="dashboard.spec.ts" time="2.27">
+</testcase>
+</testsuite>
+<testsuite name="homepage.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="chromium" tests="6" failures="0" skipped="0" time="11.094" errors="0">
+<testcase name="Homepage › should auto-redirect to login when not authenticated" classname="homepage.spec.ts" time="0.441">
+</testcase>
+<testcase name="Homepage › should redirect authenticated user to appropriate page" classname="homepage.spec.ts" time="2.538">
+</testcase>
+<testcase name="Homepage › should redirect authenticated admin to dashboard" classname="homepage.spec.ts" time="2.558">
+</testcase>
+<testcase name="Homepage › should show role-appropriate navigation for regular user" classname="homepage.spec.ts" time="2.265">
 <system-out>
 <![CDATA[Add Book link is visible - access control handled at page level
 ]]>
 </system-out>
 </testcase>
-<testcase name="Homepage › should navigate between Books and My Reservations pages" classname="homepage.spec.ts" time="2.687">
+<testcase name="Homepage › should navigate between Books and My Reservations pages" classname="homepage.spec.ts" time="2.815">
 </testcase>
-<testcase name="Homepage › should display proper loading state and page title" classname="homepage.spec.ts" time="0.442">
-</testcase>
-</testsuite>
-<testsuite name="login.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="chromium" tests="6" failures="0" skipped="0" time="10.289" errors="0">
-<testcase name="Login Page › should login successfully as valid user" classname="login.spec.ts" time="2.31">
-</testcase>
-<testcase name="Login Page › should reject invalid credentials" classname="login.spec.ts" time="0.526">
-</testcase>
-<testcase name="Login Page › should redirect admin to dashboard after login" classname="login.spec.ts" time="2.273">
-</testcase>
-<testcase name="Login Page › should redirect librarian to dashboard after login" classname="login.spec.ts" time="2.261">
-</testcase>
-<testcase name="Login Page › should logout successfully and redirect to login" classname="login.spec.ts" time="2.503">
-</testcase>
-<testcase name="Login Page › should prevent empty form submission" classname="login.spec.ts" time="0.416">
+<testcase name="Homepage › should display proper loading state and page title" classname="homepage.spec.ts" time="0.477">
 </testcase>
 </testsuite>
-<testsuite name="navigation.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="chromium" tests="7" failures="0" skipped="0" time="25.447" errors="0">
-<testcase name="Navigation › should verify navigation links for regular user" classname="navigation.spec.ts" time="3.089">
+<testsuite name="login.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="chromium" tests="6" failures="0" skipped="0" time="10.607" errors="0">
+<testcase name="Login Page › should login successfully as valid user" classname="login.spec.ts" time="2.444">
 </testcase>
-<testcase name="Navigation › should verify navigation links for librarian" classname="navigation.spec.ts" time="3.142">
+<testcase name="Login Page › should reject invalid credentials" classname="login.spec.ts" time="0.606">
 </testcase>
-<testcase name="Navigation › should show admin features only for authorized users" classname="navigation.spec.ts" time="5.458">
+<testcase name="Login Page › should redirect admin to dashboard after login" classname="login.spec.ts" time="2.31">
+</testcase>
+<testcase name="Login Page › should redirect librarian to dashboard after login" classname="login.spec.ts" time="2.26">
+</testcase>
+<testcase name="Login Page › should logout successfully and redirect to login" classname="login.spec.ts" time="2.498">
+</testcase>
+<testcase name="Login Page › should prevent empty form submission" classname="login.spec.ts" time="0.489">
+</testcase>
+</testsuite>
+<testsuite name="navigation.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="chromium" tests="7" failures="0" skipped="0" time="24.923" errors="0">
+<testcase name="Navigation › should verify navigation links for regular user" classname="navigation.spec.ts" time="2.966">
+</testcase>
+<testcase name="Navigation › should verify navigation links for librarian" classname="navigation.spec.ts" time="3.006">
+</testcase>
+<testcase name="Navigation › should show admin features only for authorized users" classname="navigation.spec.ts" time="5.311">
 <system-out>
 <![CDATA[Add Book link visible - access control handled at page level
 ]]>
 </system-out>
 </testcase>
-<testcase name="Navigation › should show dashboard navigation only for authorized roles" classname="navigation.spec.ts" time="5.355">
+<testcase name="Navigation › should show dashboard navigation only for authorized roles" classname="navigation.spec.ts" time="5.423">
 </testcase>
-<testcase name="Navigation › should reset session properly on logout" classname="navigation.spec.ts" time="2.701">
+<testcase name="Navigation › should reset session properly on logout" classname="navigation.spec.ts" time="2.71">
 </testcase>
-<testcase name="Navigation › should show proper navigation state and breadcrumbs" classname="navigation.spec.ts" time="3.157">
+<testcase name="Navigation › should show proper navigation state and breadcrumbs" classname="navigation.spec.ts" time="3.02">
 </testcase>
-<testcase name="Navigation › should handle responsive navigation properly" classname="navigation.spec.ts" time="2.545">
-</testcase>
-</testsuite>
-<testsuite name="reservations.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="chromium" tests="6" failures="0" skipped="0" time="14.143" errors="0">
-<testcase name="Reservations System › should reserve an available book as user" classname="reservations.spec.ts" time="2.387">
-</testcase>
-<testcase name="Reservations System › should prevent double-reserving same book" classname="reservations.spec.ts" time="2.353">
-</testcase>
-<testcase name="Reservations System › should allow librarian to approve reservation" classname="reservations.spec.ts" time="2.307">
-</testcase>
-<testcase name="Reservations System › should allow librarian to reject reservation" classname="reservations.spec.ts" time="2.317">
-</testcase>
-<testcase name="Reservations System › should allow user to view updated reservation status in My Reservations" classname="reservations.spec.ts" time="2.531">
-</testcase>
-<testcase name="Reservations System › should allow librarian to mark reservation as completed" classname="reservations.spec.ts" time="2.248">
+<testcase name="Navigation › should handle responsive navigation properly" classname="navigation.spec.ts" time="2.487">
 </testcase>
 </testsuite>
-<testsuite name="access-control.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="firefox" tests="9" failures="0" skipped="0" time="52.979" errors="0">
-<testcase name="Access Control › should redirect to login when accessing /books without authentication" classname="access-control.spec.ts" time="1.845">
+<testsuite name="reservations.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="chromium" tests="6" failures="0" skipped="0" time="14.37" errors="0">
+<testcase name="Reservations System › should reserve an available book as user" classname="reservations.spec.ts" time="2.427">
 </testcase>
-<testcase name="Access Control › should deny access to /add-book for regular users" classname="access-control.spec.ts" time="6.515">
+<testcase name="Reservations System › should prevent double-reserving same book" classname="reservations.spec.ts" time="2.454">
 </testcase>
-<testcase name="Access Control › should ensure regular users only see permitted pages" classname="access-control.spec.ts" time="7.132">
+<testcase name="Reservations System › should allow librarian to approve reservation" classname="reservations.spec.ts" time="2.29">
 </testcase>
-<testcase name="Access Control › should ensure librarians can access their permitted pages" classname="access-control.spec.ts" time="5.088">
+<testcase name="Reservations System › should allow librarian to reject reservation" classname="reservations.spec.ts" time="2.389">
 </testcase>
-<testcase name="Access Control › should ensure admin users can access all permitted pages" classname="access-control.spec.ts" time="3.957">
+<testcase name="Reservations System › should allow user to view updated reservation status in My Reservations" classname="reservations.spec.ts" time="2.559">
 </testcase>
-<testcase name="Access Control › should redirect unauthenticated users from all protected routes" classname="access-control.spec.ts" time="4.779">
-</testcase>
-<testcase name="Access Control › should enforce role-based access control consistently" classname="access-control.spec.ts" time="7.655">
-</testcase>
-<testcase name="Access Control › should maintain access control after page refresh" classname="access-control.spec.ts" time="5.446">
-</testcase>
-<testcase name="Access Control › should handle direct URL access attempts properly" classname="access-control.spec.ts" time="10.562">
+<testcase name="Reservations System › should allow librarian to mark reservation as completed" classname="reservations.spec.ts" time="2.251">
 </testcase>
 </testsuite>
-<testsuite name="books.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="firefox" tests="6" failures="0" skipped="0" time="24.408" errors="0">
-<testcase name="Books Management › should view all books and confirm at least 10 appear" classname="books.spec.ts" time="2.715">
+<testsuite name="access-control.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="firefox" tests="9" failures="0" skipped="0" time="53.468" errors="0">
+<testcase name="Access Control › should redirect to login when accessing /books without authentication" classname="access-control.spec.ts" time="1.953">
 </testcase>
-<testcase name="Books Management › should search by title or author and verify results" classname="books.spec.ts" time="2.854">
+<testcase name="Access Control › should deny access to /add-book for regular users" classname="access-control.spec.ts" time="6.02">
 </testcase>
-<testcase name="Books Management › should view book details by clicking a book" classname="books.spec.ts" time="2.767">
+<testcase name="Access Control › should ensure regular users only see permitted pages" classname="access-control.spec.ts" time="7.178">
 </testcase>
-<testcase name="Books Management › should add new book as admin" classname="books.spec.ts" time="7.415">
+<testcase name="Access Control › should ensure librarians can access their permitted pages" classname="access-control.spec.ts" time="5.215">
 </testcase>
-<testcase name="Books Management › should validate required fields on Add Book form" classname="books.spec.ts" time="5.702">
+<testcase name="Access Control › should ensure admin users can access all permitted pages" classname="access-control.spec.ts" time="4.31">
 </testcase>
-<testcase name="Books Management › should refresh books list when refresh button clicked" classname="books.spec.ts" time="2.955">
+<testcase name="Access Control › should redirect unauthenticated users from all protected routes" classname="access-control.spec.ts" time="4.567">
 </testcase>
-</testsuite>
-<testsuite name="dashboard.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="firefox" tests="7" failures="0" skipped="0" time="21.358" errors="0">
-<testcase name="Dashboard › should verify dashboard loads for admin" classname="dashboard.spec.ts" time="2.681">
+<testcase name="Access Control › should enforce role-based access control consistently" classname="access-control.spec.ts" time="7.987">
 </testcase>
-<testcase name="Dashboard › should verify dashboard loads for librarian" classname="dashboard.spec.ts" time="2.62">
+<testcase name="Access Control › should maintain access control after page refresh" classname="access-control.spec.ts" time="5.279">
 </testcase>
-<testcase name="Dashboard › should check total reservations count" classname="dashboard.spec.ts" time="2.734">
-</testcase>
-<testcase name="Dashboard › should check book inventory statistics" classname="dashboard.spec.ts" time="2.695">
-</testcase>
-<testcase name="Dashboard › should navigate to reservation approval section" classname="dashboard.spec.ts" time="2.665">
-</testcase>
-<testcase name="Dashboard › should prevent regular users from accessing dashboard" classname="dashboard.spec.ts" time="5.096">
-</testcase>
-<testcase name="Dashboard › should handle dashboard loading states properly" classname="dashboard.spec.ts" time="2.867">
+<testcase name="Access Control › should handle direct URL access attempts properly" classname="access-control.spec.ts" time="10.959">
 </testcase>
 </testsuite>
-<testsuite name="homepage.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="firefox" tests="6" failures="0" skipped="0" time="16.089" errors="0">
-<testcase name="Homepage › should auto-redirect to login when not authenticated" classname="homepage.spec.ts" time="0.84">
+<testsuite name="books.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="firefox" tests="6" failures="0" skipped="0" time="25.506" errors="0">
+<testcase name="Books Management › should view all books and confirm at least 10 appear" classname="books.spec.ts" time="3.053">
 </testcase>
-<testcase name="Homepage › should redirect authenticated user to appropriate page" classname="homepage.spec.ts" time="3.454">
+<testcase name="Books Management › should search by title or author and verify results" classname="books.spec.ts" time="2.92">
 </testcase>
-<testcase name="Homepage › should redirect authenticated admin to dashboard" classname="homepage.spec.ts" time="3.851">
+<testcase name="Books Management › should view book details by clicking a book" classname="books.spec.ts" time="3.267">
 </testcase>
-<testcase name="Homepage › should show role-appropriate navigation for regular user" classname="homepage.spec.ts" time="3.054">
+<testcase name="Books Management › should add new book as admin" classname="books.spec.ts" time="7.489">
 </testcase>
-<testcase name="Homepage › should navigate between Books and My Reservations pages" classname="homepage.spec.ts" time="3.656">
+<testcase name="Books Management › should validate required fields on Add Book form" classname="books.spec.ts" time="5.74">
 </testcase>
-<testcase name="Homepage › should display proper loading state and page title" classname="homepage.spec.ts" time="1.234">
-</testcase>
-</testsuite>
-<testsuite name="login.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="firefox" tests="6" failures="0" skipped="0" time="11.567" errors="0">
-<testcase name="Login Page › should login successfully as valid user" classname="login.spec.ts" time="2.569">
-</testcase>
-<testcase name="Login Page › should reject invalid credentials" classname="login.spec.ts" time="0.616">
-</testcase>
-<testcase name="Login Page › should redirect admin to dashboard after login" classname="login.spec.ts" time="2.594">
-</testcase>
-<testcase name="Login Page › should redirect librarian to dashboard after login" classname="login.spec.ts" time="2.485">
-</testcase>
-<testcase name="Login Page › should logout successfully and redirect to login" classname="login.spec.ts" time="2.754">
-</testcase>
-<testcase name="Login Page › should prevent empty form submission" classname="login.spec.ts" time="0.549">
+<testcase name="Books Management › should refresh books list when refresh button clicked" classname="books.spec.ts" time="3.037">
 </testcase>
 </testsuite>
-<testsuite name="navigation.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="firefox" tests="7" failures="0" skipped="0" time="30.405" errors="0">
-<testcase name="Navigation › should verify navigation links for regular user" classname="navigation.spec.ts" time="4.317">
+<testsuite name="dashboard.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="firefox" tests="7" failures="0" skipped="0" time="19.875" errors="0">
+<testcase name="Dashboard › should verify dashboard loads for admin" classname="dashboard.spec.ts" time="2.485">
 </testcase>
-<testcase name="Navigation › should verify navigation links for librarian" classname="navigation.spec.ts" time="4.182">
+<testcase name="Dashboard › should verify dashboard loads for librarian" classname="dashboard.spec.ts" time="2.556">
 </testcase>
-<testcase name="Navigation › should show admin features only for authorized users" classname="navigation.spec.ts" time="5.477">
-<system-out>
-<![CDATA[Add Book link visible - access control handled at page level
-]]>
-</system-out>
+<testcase name="Dashboard › should check total reservations count" classname="dashboard.spec.ts" time="2.476">
 </testcase>
-<testcase name="Navigation › should show dashboard navigation only for authorized roles" classname="navigation.spec.ts" time="6.489">
+<testcase name="Dashboard › should check book inventory statistics" classname="dashboard.spec.ts" time="2.506">
 </testcase>
-<testcase name="Navigation › should reset session properly on logout" classname="navigation.spec.ts" time="3.09">
+<testcase name="Dashboard › should navigate to reservation approval section" classname="dashboard.spec.ts" time="2.382">
 </testcase>
-<testcase name="Navigation › should show proper navigation state and breadcrumbs" classname="navigation.spec.ts" time="3.809">
+<testcase name="Dashboard › should prevent regular users from accessing dashboard" classname="dashboard.spec.ts" time="4.904">
 </testcase>
-<testcase name="Navigation › should handle responsive navigation properly" classname="navigation.spec.ts" time="3.041">
+<testcase name="Dashboard › should handle dashboard loading states properly" classname="dashboard.spec.ts" time="2.566">
 </testcase>
 </testsuite>
-<testsuite name="reservations.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="firefox" tests="6" failures="0" skipped="0" time="17.929" errors="0">
-<testcase name="Reservations System › should reserve an available book as user" classname="reservations.spec.ts" time="3.094">
+<testsuite name="homepage.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="firefox" tests="6" failures="0" skipped="0" time="13.283" errors="0">
+<testcase name="Homepage › should auto-redirect to login when not authenticated" classname="homepage.spec.ts" time="0.619">
 </testcase>
-<testcase name="Reservations System › should prevent double-reserving same book" classname="reservations.spec.ts" time="3.271">
+<testcase name="Homepage › should redirect authenticated user to appropriate page" classname="homepage.spec.ts" time="2.949">
 </testcase>
-<testcase name="Reservations System › should allow librarian to approve reservation" classname="reservations.spec.ts" time="2.713">
+<testcase name="Homepage › should redirect authenticated admin to dashboard" classname="homepage.spec.ts" time="2.851">
 </testcase>
-<testcase name="Reservations System › should allow librarian to reject reservation" classname="reservations.spec.ts" time="2.473">
+<testcase name="Homepage › should show role-appropriate navigation for regular user" classname="homepage.spec.ts" time="2.667">
 </testcase>
-<testcase name="Reservations System › should allow user to view updated reservation status in My Reservations" classname="reservations.spec.ts" time="3.437">
+<testcase name="Homepage › should navigate between Books and My Reservations pages" classname="homepage.spec.ts" time="3.473">
 </testcase>
-<testcase name="Reservations System › should allow librarian to mark reservation as completed" classname="reservations.spec.ts" time="2.941">
-</testcase>
-</testsuite>
-<testsuite name="access-control.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="webkit" tests="9" failures="0" skipped="0" time="50.373" errors="0">
-<testcase name="Access Control › should redirect to login when accessing /books without authentication" classname="access-control.spec.ts" time="1.917">
-</testcase>
-<testcase name="Access Control › should deny access to /add-book for regular users" classname="access-control.spec.ts" time="6.131">
-</testcase>
-<testcase name="Access Control › should ensure regular users only see permitted pages" classname="access-control.spec.ts" time="6.154">
-</testcase>
-<testcase name="Access Control › should ensure librarians can access their permitted pages" classname="access-control.spec.ts" time="4.461">
-</testcase>
-<testcase name="Access Control › should ensure admin users can access all permitted pages" classname="access-control.spec.ts" time="4.502">
-</testcase>
-<testcase name="Access Control › should redirect unauthenticated users from all protected routes" classname="access-control.spec.ts" time="4.487">
-</testcase>
-<testcase name="Access Control › should enforce role-based access control consistently" classname="access-control.spec.ts" time="7.219">
-</testcase>
-<testcase name="Access Control › should maintain access control after page refresh" classname="access-control.spec.ts" time="5.012">
-</testcase>
-<testcase name="Access Control › should handle direct URL access attempts properly" classname="access-control.spec.ts" time="10.49">
+<testcase name="Homepage › should display proper loading state and page title" classname="homepage.spec.ts" time="0.724">
 </testcase>
 </testsuite>
-<testsuite name="books.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="webkit" tests="6" failures="0" skipped="0" time="24.272" errors="0">
-<testcase name="Books Management › should view all books and confirm at least 10 appear" classname="books.spec.ts" time="2.59">
+<testsuite name="login.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="firefox" tests="6" failures="0" skipped="0" time="13.019" errors="0">
+<testcase name="Login Page › should login successfully as valid user" classname="login.spec.ts" time="2.875">
 </testcase>
-<testcase name="Books Management › should search by title or author and verify results" classname="books.spec.ts" time="2.635">
+<testcase name="Login Page › should reject invalid credentials" classname="login.spec.ts" time="0.792">
 </testcase>
-<testcase name="Books Management › should view book details by clicking a book" classname="books.spec.ts" time="2.664">
+<testcase name="Login Page › should redirect admin to dashboard after login" classname="login.spec.ts" time="2.586">
 </testcase>
-<testcase name="Books Management › should add new book as admin" classname="books.spec.ts" time="7.681">
+<testcase name="Login Page › should redirect librarian to dashboard after login" classname="login.spec.ts" time="2.718">
 </testcase>
-<testcase name="Books Management › should validate required fields on Add Book form" classname="books.spec.ts" time="5.478">
+<testcase name="Login Page › should logout successfully and redirect to login" classname="login.spec.ts" time="3.271">
 </testcase>
-<testcase name="Books Management › should refresh books list when refresh button clicked" classname="books.spec.ts" time="3.224">
-</testcase>
-</testsuite>
-<testsuite name="dashboard.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="webkit" tests="7" failures="0" skipped="0" time="21.138" errors="0">
-<testcase name="Dashboard › should verify dashboard loads for admin" classname="dashboard.spec.ts" time="2.819">
-</testcase>
-<testcase name="Dashboard › should verify dashboard loads for librarian" classname="dashboard.spec.ts" time="2.644">
-</testcase>
-<testcase name="Dashboard › should check total reservations count" classname="dashboard.spec.ts" time="2.432">
-</testcase>
-<testcase name="Dashboard › should check book inventory statistics" classname="dashboard.spec.ts" time="2.512">
-</testcase>
-<testcase name="Dashboard › should navigate to reservation approval section" classname="dashboard.spec.ts" time="2.503">
-</testcase>
-<testcase name="Dashboard › should prevent regular users from accessing dashboard" classname="dashboard.spec.ts" time="5.198">
-</testcase>
-<testcase name="Dashboard › should handle dashboard loading states properly" classname="dashboard.spec.ts" time="3.03">
+<testcase name="Login Page › should prevent empty form submission" classname="login.spec.ts" time="0.777">
 </testcase>
 </testsuite>
-<testsuite name="homepage.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="webkit" tests="6" failures="0" skipped="0" time="16.588" errors="0">
-<testcase name="Homepage › should auto-redirect to login when not authenticated" classname="homepage.spec.ts" time="1.21">
+<testsuite name="navigation.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="firefox" tests="7" failures="0" skipped="0" time="32.307" errors="0">
+<testcase name="Navigation › should verify navigation links for regular user" classname="navigation.spec.ts" time="4.549">
 </testcase>
-<testcase name="Homepage › should redirect authenticated user to appropriate page" classname="homepage.spec.ts" time="3.982">
+<testcase name="Navigation › should verify navigation links for librarian" classname="navigation.spec.ts" time="4.139">
 </testcase>
-<testcase name="Homepage › should redirect authenticated admin to dashboard" classname="homepage.spec.ts" time="3.43">
+<testcase name="Navigation › should show admin features only for authorized users" classname="navigation.spec.ts" time="5.847">
 </testcase>
-<testcase name="Homepage › should show role-appropriate navigation for regular user" classname="homepage.spec.ts" time="3.264">
+<testcase name="Navigation › should show dashboard navigation only for authorized roles" classname="navigation.spec.ts" time="6.73">
 </testcase>
-<testcase name="Homepage › should navigate between Books and My Reservations pages" classname="homepage.spec.ts" time="3.959">
+<testcase name="Navigation › should reset session properly on logout" classname="navigation.spec.ts" time="3.777">
 </testcase>
-<testcase name="Homepage › should display proper loading state and page title" classname="homepage.spec.ts" time="0.743">
+<testcase name="Navigation › should show proper navigation state and breadcrumbs" classname="navigation.spec.ts" time="3.938">
 </testcase>
-</testsuite>
-<testsuite name="login.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="webkit" tests="6" failures="0" skipped="0" time="12.001" errors="0">
-<testcase name="Login Page › should login successfully as valid user" classname="login.spec.ts" time="2.627">
-</testcase>
-<testcase name="Login Page › should reject invalid credentials" classname="login.spec.ts" time="0.69">
-</testcase>
-<testcase name="Login Page › should redirect admin to dashboard after login" classname="login.spec.ts" time="2.522">
-</testcase>
-<testcase name="Login Page › should redirect librarian to dashboard after login" classname="login.spec.ts" time="2.442">
-</testcase>
-<testcase name="Login Page › should logout successfully and redirect to login" classname="login.spec.ts" time="2.803">
-</testcase>
-<testcase name="Login Page › should prevent empty form submission" classname="login.spec.ts" time="0.917">
+<testcase name="Navigation › should handle responsive navigation properly" classname="navigation.spec.ts" time="3.327">
 </testcase>
 </testsuite>
-<testsuite name="navigation.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="webkit" tests="7" failures="0" skipped="0" time="32.387" errors="0">
-<testcase name="Navigation › should verify navigation links for regular user" classname="navigation.spec.ts" time="4.568">
+<testsuite name="reservations.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="firefox" tests="6" failures="0" skipped="0" time="16.754" errors="0">
+<testcase name="Reservations System › should reserve an available book as user" classname="reservations.spec.ts" time="2.836">
 </testcase>
-<testcase name="Navigation › should verify navigation links for librarian" classname="navigation.spec.ts" time="4.459">
+<testcase name="Reservations System › should prevent double-reserving same book" classname="reservations.spec.ts" time="2.97">
 </testcase>
-<testcase name="Navigation › should show admin features only for authorized users" classname="navigation.spec.ts" time="6.003">
-<system-out>
-<![CDATA[Add Book link visible - access control handled at page level
-]]>
-</system-out>
+<testcase name="Reservations System › should allow librarian to approve reservation" classname="reservations.spec.ts" time="2.561">
 </testcase>
-<testcase name="Navigation › should show dashboard navigation only for authorized roles" classname="navigation.spec.ts" time="6.241">
+<testcase name="Reservations System › should allow librarian to reject reservation" classname="reservations.spec.ts" time="2.541">
 </testcase>
-<testcase name="Navigation › should reset session properly on logout" classname="navigation.spec.ts" time="3.509">
+<testcase name="Reservations System › should allow user to view updated reservation status in My Reservations" classname="reservations.spec.ts" time="3.085">
 </testcase>
-<testcase name="Navigation › should show proper navigation state and breadcrumbs" classname="navigation.spec.ts" time="4.297">
-</testcase>
-<testcase name="Navigation › should handle responsive navigation properly" classname="navigation.spec.ts" time="3.31">
+<testcase name="Reservations System › should allow librarian to mark reservation as completed" classname="reservations.spec.ts" time="2.761">
 </testcase>
 </testsuite>
-<testsuite name="reservations.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="webkit" tests="6" failures="0" skipped="0" time="16.342" errors="0">
-<testcase name="Reservations System › should reserve an available book as user" classname="reservations.spec.ts" time="2.895">
+<testsuite name="access-control.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="webkit" tests="9" failures="0" skipped="0" time="54.07" errors="0">
+<testcase name="Access Control › should redirect to login when accessing /books without authentication" classname="access-control.spec.ts" time="2.403">
 </testcase>
-<testcase name="Reservations System › should prevent double-reserving same book" classname="reservations.spec.ts" time="2.882">
+<testcase name="Access Control › should deny access to /add-book for regular users" classname="access-control.spec.ts" time="6.983">
 </testcase>
-<testcase name="Reservations System › should allow librarian to approve reservation" classname="reservations.spec.ts" time="2.558">
+<testcase name="Access Control › should ensure regular users only see permitted pages" classname="access-control.spec.ts" time="6.764">
 </testcase>
-<testcase name="Reservations System › should allow librarian to reject reservation" classname="reservations.spec.ts" time="2.362">
+<testcase name="Access Control › should ensure librarians can access their permitted pages" classname="access-control.spec.ts" time="5.212">
 </testcase>
-<testcase name="Reservations System › should allow user to view updated reservation status in My Reservations" classname="reservations.spec.ts" time="3.137">
+<testcase name="Access Control › should ensure admin users can access all permitted pages" classname="access-control.spec.ts" time="4.448">
 </testcase>
-<testcase name="Reservations System › should allow librarian to mark reservation as completed" classname="reservations.spec.ts" time="2.508">
+<testcase name="Access Control › should redirect unauthenticated users from all protected routes" classname="access-control.spec.ts" time="4.701">
+</testcase>
+<testcase name="Access Control › should enforce role-based access control consistently" classname="access-control.spec.ts" time="7.689">
+</testcase>
+<testcase name="Access Control › should maintain access control after page refresh" classname="access-control.spec.ts" time="5.252">
+</testcase>
+<testcase name="Access Control › should handle direct URL access attempts properly" classname="access-control.spec.ts" time="10.618">
 </testcase>
 </testsuite>
-<testsuite name="homepage.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="mobile" tests="6" failures="0" skipped="0" time="14.32" errors="0">
-<testcase name="Homepage › should auto-redirect to login when not authenticated" classname="homepage.spec.ts" time="1.236">
+<testsuite name="books.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="webkit" tests="6" failures="0" skipped="0" time="24.216" errors="0">
+<testcase name="Books Management › should view all books and confirm at least 10 appear" classname="books.spec.ts" time="3.022">
 </testcase>
-<testcase name="Homepage › should redirect authenticated user to appropriate page" classname="homepage.spec.ts" time="3.591">
+<testcase name="Books Management › should search by title or author and verify results" classname="books.spec.ts" time="2.735">
 </testcase>
-<testcase name="Homepage › should redirect authenticated admin to dashboard" classname="homepage.spec.ts" time="3.152">
+<testcase name="Books Management › should view book details by clicking a book" classname="books.spec.ts" time="2.987">
 </testcase>
-<testcase name="Homepage › should show role-appropriate navigation for regular user" classname="homepage.spec.ts" time="2.479">
+<testcase name="Books Management › should add new book as admin" classname="books.spec.ts" time="7.441">
+</testcase>
+<testcase name="Books Management › should validate required fields on Add Book form" classname="books.spec.ts" time="5.335">
+</testcase>
+<testcase name="Books Management › should refresh books list when refresh button clicked" classname="books.spec.ts" time="2.696">
+</testcase>
+</testsuite>
+<testsuite name="dashboard.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="webkit" tests="7" failures="0" skipped="0" time="19.082" errors="0">
+<testcase name="Dashboard › should verify dashboard loads for admin" classname="dashboard.spec.ts" time="2.371">
+</testcase>
+<testcase name="Dashboard › should verify dashboard loads for librarian" classname="dashboard.spec.ts" time="2.426">
+</testcase>
+<testcase name="Dashboard › should check total reservations count" classname="dashboard.spec.ts" time="2.373">
+</testcase>
+<testcase name="Dashboard › should check book inventory statistics" classname="dashboard.spec.ts" time="2.367">
+</testcase>
+<testcase name="Dashboard › should navigate to reservation approval section" classname="dashboard.spec.ts" time="2.422">
+</testcase>
+<testcase name="Dashboard › should prevent regular users from accessing dashboard" classname="dashboard.spec.ts" time="4.719">
+</testcase>
+<testcase name="Dashboard › should handle dashboard loading states properly" classname="dashboard.spec.ts" time="2.404">
+</testcase>
+</testsuite>
+<testsuite name="homepage.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="webkit" tests="6" failures="0" skipped="0" time="12.16" errors="0">
+<testcase name="Homepage › should auto-redirect to login when not authenticated" classname="homepage.spec.ts" time="0.492">
+</testcase>
+<testcase name="Homepage › should redirect authenticated user to appropriate page" classname="homepage.spec.ts" time="2.685">
+</testcase>
+<testcase name="Homepage › should redirect authenticated admin to dashboard" classname="homepage.spec.ts" time="2.843">
+</testcase>
+<testcase name="Homepage › should show role-appropriate navigation for regular user" classname="homepage.spec.ts" time="2.454">
 <system-out>
 <![CDATA[Add Book link is visible - access control handled at page level
 ]]>
 </system-out>
 </testcase>
-<testcase name="Homepage › should navigate between Books and My Reservations pages" classname="homepage.spec.ts" time="3.375">
+<testcase name="Homepage › should navigate between Books and My Reservations pages" classname="homepage.spec.ts" time="3.021">
 </testcase>
-<testcase name="Homepage › should display proper loading state and page title" classname="homepage.spec.ts" time="0.487">
+<testcase name="Homepage › should display proper loading state and page title" classname="homepage.spec.ts" time="0.665">
 </testcase>
 </testsuite>
-<testsuite name="navigation.spec.ts" timestamp="2025-10-31T13:02:17.255Z" hostname="mobile" tests="7" failures="0" skipped="0" time="27.656" errors="0">
-<testcase name="Navigation › should verify navigation links for regular user" classname="navigation.spec.ts" time="3.243">
+<testsuite name="login.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="webkit" tests="6" failures="0" skipped="0" time="11.112" errors="0">
+<testcase name="Login Page › should login successfully as valid user" classname="login.spec.ts" time="2.486">
 </testcase>
-<testcase name="Navigation › should verify navigation links for librarian" classname="navigation.spec.ts" time="3.584">
+<testcase name="Login Page › should reject invalid credentials" classname="login.spec.ts" time="0.662">
 </testcase>
-<testcase name="Navigation › should show admin features only for authorized users" classname="navigation.spec.ts" time="5.579">
+<testcase name="Login Page › should redirect admin to dashboard after login" classname="login.spec.ts" time="2.442">
+</testcase>
+<testcase name="Login Page › should redirect librarian to dashboard after login" classname="login.spec.ts" time="2.379">
+</testcase>
+<testcase name="Login Page › should logout successfully and redirect to login" classname="login.spec.ts" time="2.576">
+</testcase>
+<testcase name="Login Page › should prevent empty form submission" classname="login.spec.ts" time="0.567">
+</testcase>
+</testsuite>
+<testsuite name="navigation.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="webkit" tests="7" failures="0" skipped="0" time="26.638" errors="0">
+<testcase name="Navigation › should verify navigation links for regular user" classname="navigation.spec.ts" time="3.563">
+</testcase>
+<testcase name="Navigation › should verify navigation links for librarian" classname="navigation.spec.ts" time="3.494">
+</testcase>
+<testcase name="Navigation › should show admin features only for authorized users" classname="navigation.spec.ts" time="5.25">
 <system-out>
 <![CDATA[Add Book link visible - access control handled at page level
 ]]>
 </system-out>
 </testcase>
-<testcase name="Navigation › should show dashboard navigation only for authorized roles" classname="navigation.spec.ts" time="5.789">
+<testcase name="Navigation › should show dashboard navigation only for authorized roles" classname="navigation.spec.ts" time="5.411">
 </testcase>
-<testcase name="Navigation › should reset session properly on logout" classname="navigation.spec.ts" time="3.004">
+<testcase name="Navigation › should reset session properly on logout" classname="navigation.spec.ts" time="2.73">
 </testcase>
-<testcase name="Navigation › should show proper navigation state and breadcrumbs" classname="navigation.spec.ts" time="3.582">
+<testcase name="Navigation › should show proper navigation state and breadcrumbs" classname="navigation.spec.ts" time="3.408">
 </testcase>
-<testcase name="Navigation › should handle responsive navigation properly" classname="navigation.spec.ts" time="2.875">
+<testcase name="Navigation › should handle responsive navigation properly" classname="navigation.spec.ts" time="2.782">
+</testcase>
+</testsuite>
+<testsuite name="reservations.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="webkit" tests="6" failures="0" skipped="0" time="15.295" errors="0">
+<testcase name="Reservations System › should reserve an available book as user" classname="reservations.spec.ts" time="2.556">
+</testcase>
+<testcase name="Reservations System › should prevent double-reserving same book" classname="reservations.spec.ts" time="2.652">
+</testcase>
+<testcase name="Reservations System › should allow librarian to approve reservation" classname="reservations.spec.ts" time="2.391">
+</testcase>
+<testcase name="Reservations System › should allow librarian to reject reservation" classname="reservations.spec.ts" time="2.432">
+</testcase>
+<testcase name="Reservations System › should allow user to view updated reservation status in My Reservations" classname="reservations.spec.ts" time="2.843">
+</testcase>
+<testcase name="Reservations System › should allow librarian to mark reservation as completed" classname="reservations.spec.ts" time="2.421">
+</testcase>
+</testsuite>
+<testsuite name="homepage.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="mobile" tests="6" failures="0" skipped="0" time="13.778" errors="0">
+<testcase name="Homepage › should auto-redirect to login when not authenticated" classname="homepage.spec.ts" time="1.003">
+</testcase>
+<testcase name="Homepage › should redirect authenticated user to appropriate page" classname="homepage.spec.ts" time="3.077">
+</testcase>
+<testcase name="Homepage › should redirect authenticated admin to dashboard" classname="homepage.spec.ts" time="3.1">
+</testcase>
+<testcase name="Homepage › should show role-appropriate navigation for regular user" classname="homepage.spec.ts" time="2.766">
+<system-out>
+<![CDATA[Add Book link is visible - access control handled at page level
+]]>
+</system-out>
+</testcase>
+<testcase name="Homepage › should navigate between Books and My Reservations pages" classname="homepage.spec.ts" time="3.257">
+</testcase>
+<testcase name="Homepage › should display proper loading state and page title" classname="homepage.spec.ts" time="0.575">
+</testcase>
+</testsuite>
+<testsuite name="navigation.spec.ts" timestamp="2025-10-31T15:31:19.986Z" hostname="mobile" tests="7" failures="0" skipped="0" time="28.549" errors="0">
+<testcase name="Navigation › should verify navigation links for regular user" classname="navigation.spec.ts" time="4.013">
+</testcase>
+<testcase name="Navigation › should verify navigation links for librarian" classname="navigation.spec.ts" time="3.897">
+</testcase>
+<testcase name="Navigation › should show admin features only for authorized users" classname="navigation.spec.ts" time="5.393">
+<system-out>
+<![CDATA[Add Book link visible - access control handled at page level
+]]>
+</system-out>
+</testcase>
+<testcase name="Navigation › should show dashboard navigation only for authorized roles" classname="navigation.spec.ts" time="6.216">
+</testcase>
+<testcase name="Navigation › should reset session properly on logout" classname="navigation.spec.ts" time="2.938">
+</testcase>
+<testcase name="Navigation › should show proper navigation state and breadcrumbs" classname="navigation.spec.ts" time="3.316">
+</testcase>
+<testcase name="Navigation › should handle responsive navigation properly" classname="navigation.spec.ts" time="2.776">
 </testcase>
 </testsuite>
 </testsuites>
